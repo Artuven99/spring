@@ -26,7 +26,7 @@ public class ProductService {
 	
 	public Product getProduct(Long id) {
 		return repository.findById(id)// SELECT * FROM PRODUCT WHERE ID = {id}
-				.orElseThrow(() -> new RuntimeException("No se encontro el producto")); // y si no lo encuentra lanzar excepcion
+				.orElseThrow(() -> new RuntimeException("Producto no encontrado")); // y si no lo encuentra lanzar excepcion
 	}
 
     public Product updateProduct(Long id, Product newProduct) {
